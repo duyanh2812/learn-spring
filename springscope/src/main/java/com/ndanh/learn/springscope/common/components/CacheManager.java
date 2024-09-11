@@ -1,11 +1,11 @@
-package com.ndanh.learn.springscope.singleton.services;
+package com.ndanh.learn.springscope.common.components;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value="prototype")
+@Scope(value="singleton")
 public class CacheManager {
 
 }

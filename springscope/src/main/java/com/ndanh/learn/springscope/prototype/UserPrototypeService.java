@@ -1,6 +1,6 @@
-package com.ndanh.learn.springscope.singleton.services;
+package com.ndanh.learn.springscope.prototype;
 
-import com.ndanh.learn.springscope.common.components.CacheManager;
+import com.ndanh.learn.springscope.common.components.PrototypeComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/auth-singleton")
-public class AuthenticationService {
+@RequestMapping(value = "/user-prototype")
+public class UserPrototypeService {
     Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
-    public AuthenticationService(CacheManager cacheManager){
-        logger.info("AuthenticationService CacheManager " + cacheManager.hashCode());
-    };
+    public UserPrototypeService(PrototypeComponent prototypeComponent){
+        logger.info("UserPrototypeService  PrototypeComponent" + prototypeComponent.hashCode());
+    }
 
     @GetMapping(value = "/all")
-    public String getUsers(){
-        return "auth-singleton";
+    public String getEmails(){
+        return "user-prototype";
     }
 }
