@@ -1,4 +1,4 @@
-package com.ndanh.learn.springscope.common.components;
+package com.ndanh.learn.springscope.prototype.components;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

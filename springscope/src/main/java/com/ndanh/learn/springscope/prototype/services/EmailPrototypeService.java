@@ -1,6 +1,6 @@
-package com.ndanh.learn.springscope.prototype;
+package com.ndanh.learn.springscope.prototype.services;
 
-import com.ndanh.learn.springscope.common.components.PrototypeComponent;
+import com.ndanh.learn.springscope.prototype.components.PrototypeComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/email-prototype")
 public class EmailPrototypeService {
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    PrototypeComponent prototypeComponent;
+
+
     @Autowired
     public EmailPrototypeService(PrototypeComponent prototypeComponent){
-        logger.info("EmailPrototypeService  PrototypeComponent" + prototypeComponent.hashCode());
+        this.prototypeComponent = prototypeComponent;
     }
 
     @GetMapping(value = "/all")
     public String getEmails(){
-        return "email-prototype";
+        return prototypeComponent.toString();
     }
 }
