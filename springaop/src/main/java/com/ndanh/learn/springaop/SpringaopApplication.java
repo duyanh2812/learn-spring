@@ -12,14 +12,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class SpringaopApplication {
 
-//	public static void main(String[] args) {
-//		SpringApplication.run(SpringaopApplication.class, args);
-//	}
-
 	public static void main(String[] args) {
-		ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
-		ShoppingCart shoppingCart = context.getBean(ShoppingCart.class);
-		shoppingCart.checkOutWithParam("Input Param");
-		shoppingCart.quantity();
+		SpringApplication.run(SpringaopApplication.class, args);
 	}
+
+//	public static void main(String[] args) {
+//		ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+//		ShoppingCart shoppingCart = context.getBean(ShoppingCart.class);
+//		shoppingCart.checkOutWithParam("Input Param");
+//		shoppingCart.quantity();
+//	}
 }
