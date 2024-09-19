@@ -2,6 +2,7 @@ package com.ndanh.learn.spring.applicationcontext;
 
 import com.ndanh.learn.spring.applicationcontext.config.ApplicationConfig;
 import com.ndanh.learn.spring.applicationcontext.service.UserService;
+import com.ndanh.learn.spring.applicationcontext.util.EmailUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -21,8 +22,8 @@ public class ApplicationcontextApplication {
 		ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 
 		applicationContext.registerShutdownHook();
-		UserService userService = applicationContext.getBean(UserService.class);
-		userService.getAllUsers();
+
+		EmailUtil.sendEmail("Duy ANh", "Thang", "Hello thang");
 
 	}
 

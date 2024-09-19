@@ -15,4 +15,8 @@ public class UserService {
     public void getAllUsers(){
         System.out.println(userRepository.toString());
     }
+
+    public void sendEmail(String from, String to, String message){
+        System.out.println("Email sent from " + from + " to " + to + " with message " + message);
+    }
 }

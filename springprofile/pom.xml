@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ndanh.learn.spring</groupId>
-	<artifactId>applicationcontext</artifactId>
+	<artifactId>springprofile</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>applicationcontext</name>
-	<description>Demo project for Spring Boot</description>
+	<name>springprofile</name>
+	<description>Spring Profile</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,12 +39,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>6.1.12</version>
 		</dependency>
 	</dependencies>
 
