@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: consumer
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: test
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      max-poll-records: 1
+      max-poll-interval-ms: 5000
+      session-timeout-ms: 6000
+      heartbeat-interval-ms: 2000
+      isolation-level: read_committed
+      properties:
+        spring.json.trusted.packages: '*'
+
+server:
+    port: 8082
+
+kafka:
+  topic: test
+
+
