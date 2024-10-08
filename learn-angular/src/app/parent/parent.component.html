@@ -1,0 +1,14 @@
+<p>parent works!</p>
+
+  <label>User Name: </label><input [(ngModel)]="obj.name" name="name"/>
+  <label>User Email: </label><input [(ngModel)]="obj.email" name="email"/>
+  <label>User Address: </label><input [(ngModel)]="obj.address" name="adress"/>
+  <button (click)="addUser()">Add User</button>
+
+<app-child *ngFor="let item of users; let i = index"
+[user]="item"
+[index]="i"
+(delete)="onDelete(i)">
+
+</app-child>
+
